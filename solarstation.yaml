@@ -38,7 +38,7 @@ api:
   reboot_timeout: 15min
 
 ota:
-  password: "7c815d24be0121ab0b77d95a6ab83ebe"
+  password: "REDACTED"
   safe_mode: true
 
 uart:
