@@ -41,12 +41,25 @@ Welcome to the Solar Station Project! This project harnesses the power of ESPHom
 ### Wemos D1 Mini (ESP8266) Connections
 
 - **DHT22 Sensor**
-  - VCC -> 3.3V
+  - VCC -> 5V
   - GND -> GND
   - Data -> D4
 
+- Wind Speed Sensor with Voltage Divider
+
+Voltage Divider Circuit: Use two resistors to divide the 5V signal to a safe level for the ESP8266 (3.3V max on A0 pin).
+Resistor R1: 2.2k ohms
+Resistor R2: 3.3k ohms
+Connections:
+Wind Speed Sensor Signal -> R1 (top end)
+R1 (bottom end) -> R2 (top end) and A0 (Analog Input on Wemos D1 Mini)
+R2 (bottom end) -> GND
+Wind Speed Sensor GND -> GND
+Wind Speed Sensor VCC -> 5V
+
+
 - **Dallas Temperature Sensor**
-  - VCC -> 3.3V
+  - VCC -> 5V
   - GND -> GND
   - Data -> D5
 
@@ -61,13 +74,13 @@ Welcome to the Solar Station Project! This project harnesses the power of ESPHom
   - RX -> D1
 
 - **INA219 Current Sensor (Solar Panel)**
-  - VCC -> 3.3V
+  - VCC -> 5V
   - GND -> GND
   - SCL -> D7
   - SDA -> D6
-
+  - 
 - **INA219 Current Sensor (Battery)**
-  - VCC -> 3.3V
+  - VCC -> 5V
   - GND -> GND
   - SCL -> D7
   - SDA -> D6
